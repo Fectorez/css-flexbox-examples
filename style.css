@@ -1,0 +1,135 @@
+:root {
+  --white: #ddd;
+  --black: #222;
+}
+
+body {
+  margin: 0 0 500px 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--black);
+  color: var(--white);
+}
+
+section {
+    padding: 20px 0;
+}
+
+
+.flex {
+  display: flex;
+  align-items: center;
+  border: 1px dashed red;
+}
+
+.flex > * {
+    border: 1px solid lightgreen;
+}
+
+
+.flex-2 > *:nth-last-child(2) {
+  flex-grow: 1;
+}
+
+
+.flex-3 > *:nth-last-child(2) {
+  flex-grow: 5;
+}
+
+
+.flex-4 > *:first-child {
+  flex-grow: 1;
+}
+.flex-4 > *:nth-last-child(2) {
+  flex-grow: 1;
+}
+
+
+.flex-5 > *:first-child {
+    flex-grow: 4;
+}
+.flex-5 > *:nth-last-child(2) {
+    flex-grow: 1;
+}
+
+
+.flex-6 > * {
+    flex-basis: 100px;
+}
+
+
+.flex-7 > * {
+    flex-basis: 100px;
+    flex-grow: 1;
+}
+
+
+.flex-8 > * {
+    flex-basis: 10%;
+}
+
+
+.flex-9 > * {
+    flex-basis: 10%;
+}
+.flex-9 > *:last-child {
+    flex-grow: 1;
+}
+
+
+.flex-10 > * {
+    flex-basis: 170px;
+}
+.flex-10 > *:nth-child(5) {
+    flex-shrink: 1;
+}
+
+.flex-11 > * {
+    flex-basis: 170px;
+}
+.flex-11 > *:nth-child(5) {
+    flex-shrink: 10;
+}
+
+
+.flex-12 > * {
+    flex: 1 1 auto;
+}
+
+
+.flex-13 > * {
+    flex: 1 1 auto;
+}
+
+
+.flex-14 > *:first-child {
+    flex-grow: 1;
+}
+
+
+.flex-15 {
+    flex-wrap: wrap;
+}
+.flex-15 > * {
+    min-width: 100px;
+}
+
+
+.flex-16 {
+    flex-wrap: wrap;
+}
+.flex-16 > * {
+    min-width: 100px;
+    flex-grow: 1;
+}
+
+
+.flex-17 {
+    flex-wrap: wrap;
+}
+.flex-17 > * {
+    min-width: 100px;
+}
+.flex-17 > *:nth-child(8) {
+    flex-grow: 1;
+}

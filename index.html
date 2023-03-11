@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" />
+    <title>Document</title>
+</head>
+<body>
+    <h1>Essai Flexbox : grow & shrink</h1>
+    <p>Les flexbox sont en align-items: center;</p>
+
+    <section>
+        <h2>Sans rien</h2>
+        <i>on a un espace vide à droite</i>
+        <div class="flex flex-1">
+            <div>SALUT</div>
+            <div>C'est moi ici !</div>
+            <div>Bise</div>
+            <div>Comment tu t'appelles ?</div>
+            <div>C'est moi qui gagne à tous les coups à ces jeux, haha !</div>
+            <div>Moi aussi</div>
+            <div>Je dort beaucoup !</div>
+            <div>Cool...</div>
+            <div>X</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>flex-grow: 1 sur l'avant-dernier</h2>
+        <i>C'est l'avant-dernier ("Cool...") qui va s'agrandir pour combler les trous</i>
+        <div class="flex flex-2">
+            <div>SALUT</div>
+            <div>C'est moi ici !</div>
+            <div>Bise</div>
+            <div>Comment tu t'appelles ?</div>
+            <div>C'est moi qui gagne à tous les coups à ces jeux, haha !</div>
+            <div>Moi aussi</div>
+            <div>Je dort beaucoup !</div>
+            <div>Cool...</div>
+            <div>X</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>flex-grow: 5 sur l'avant-dernier</h2>
+        <i>Même effet que précédemment</i>
+        <div class="flex flex-3">
+            <div>SALUT</div>
+            <div>C'est moi ici !</div>
+            <div>Bise</div>
+            <div>Comment tu t'appelles ?</div>
+            <div>C'est moi qui gagne à tous les coups à ces jeux, haha !</div>
+            <div>Moi aussi</div>
+            <div>Je dort beaucoup !</div>
+            <div>Cool...</div>
+            <div>X</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>flex-grow: 1 sur le 1er + flex-grow: 1 sur l'avant-dernier</h2>
+        <i>Le 1er et l'avant-dernier vont s'agrandir de la même manière</i>
+        <div class="flex flex-4">
+            <div>SALUT</div>
+            <div>C'est moi ici !</div>
+            <div>Bise</div>
+            <div>Comment tu t'appelles ?</div>
+            <div>C'est moi qui gagne à tous les coups à ces jeux, haha !</div>
+            <div>Moi aussi</div>
+            <div>Je dort beaucoup !</div>
+            <div>Cool...</div>
+            <div>X</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>flex-grow: 4 sur le 1er + flex-grow: 1 sur l'avant-dernier</h2>
+        <i>Le 1er va s'agrandir plus vite que l'avant-dernier</i>
+        <div class="flex flex-5">
+            <div>SALUT</div>
+            <div>C'est moi ici !</div>
+            <div>Bise</div>
+            <div>Comment tu t'appelles ?</div>
+            <div>C'est moi qui gagne à tous les coups à ces jeux, haha !</div>
+            <div>Moi aussi</div>
+            <div>Je dort beaucoup !</div>
+            <div>Cool...</div>
+            <div>X</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>flex-basis: 100px sur tous les éléments</h2>
+        <i>Tous les éléments mesurent 100px</i>
+        <div class="flex flex-6">
+            <div>SALUT</div>
+            <div>C'est moi ici !</div>
+            <div>Bise</div>
+            <div>Comment tu t'appelles ?</div>
+            <div>C'est moi qui gagne à tous les coups à ces jeux, haha !</div>
+            <div>Moi aussi</div>
+            <div>Je dort beaucoup !</div>
+            <div>Cool...</div>
+            <div>X</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>flex-basis: 100px + flex-grow: 1 sur tous les éléments</h2>
+        <i>De base, tous les éléments mesurent 100px, puis ils s'agrandissent tous de la même manière pour remplir l'espace</i>
+        <div class="flex flex-7">
+            <div>SALUT</div>
+            <div>C'est moi ici !</div>
+            <div>Bise</div>
+            <div>Comment tu t'appelles ?</div>
+            <div>C'est moi qui gagne à tous les coups à ces jeux, haha !</div>
+            <div>Moi aussi</div>
+            <div>Je dort beaucoup !</div>
+            <div>Cool...</div>
+            <div>X</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>flex-basis: 10% sur tous les éléments</h2>
+        <i>Tous les éléments mesurent 10% : 10% * 9 éléments = 90% occupés ; il reste donc 10% d'espace</i>
+        <div class="flex flex-8">
+            <div>SALUT</div>
+            <div>C'est moi ici !</div>
+            <div>Bise</div>
+            <div>Comment tu t'appelles ?</div>
+            <div>C'est moi qui gagne à tous les coups à ces jeux, haha !</div>
+            <div>Moi aussi</div>
+            <div>Je dort beaucoup !</div>
+            <div>Cool...</div>
+            <div>X</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>flex-basis: 10% sur tous les éléments + flex-grow: 1 sur le dernier élément</h2>
+        <i>Tous les éléments mesurent 10% : 10% * 9 éléments = 90% occupés ; le dernier va s'agrandir pour occuper les 10% restant</i>
+        <div class="flex flex-9">
+            <div>SALUT</div>
+            <div>C'est moi ici !</div>
+            <div>Bise</div>
+            <div>Comment tu t'appelles ?</div>
+            <div>C'est moi qui gagne à tous les coups à ces jeux, haha !</div>
+            <div>Moi aussi</div>
+            <div>Je dort beaucoup !</div>
+            <div>Cool...</div>
+            <div>X</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>flex-basis: 170px sur tous les éléments + flex-shrink: 1 sur le 5ème élément</h2>
+        <i>Tous les éléments mesurent 170px et le 5ème va rétrécir autant que les autres, car la valeur par défaut est de 1</i>
+        <div class="flex flex-10">
+            <div>SALUT</div>
+            <div>C'est moi ici !</div>
+            <div>Bise</div>
+            <div>Comment tu t'appelles ?</div>
+            <div>C'est moi qui gagne à tous les coups à ces jeux, haha !</div>
+            <div>Moi aussi</div>
+            <div>Je dort beaucoup !</div>
+            <div>Cool...</div>
+            <div>X</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>flex-basis: 170px sur tous les éléments + flex-shrink: 10 sur le 5ème élément</h2>
+        <i>Tous les éléments mesurent 170px et le 5ème va rétrécir beaucoup plus que les autres</i>
+        <div class="flex flex-11">
+            <div>SALUT</div>
+            <div>C'est moi ici !</div>
+            <div>Bise</div>
+            <div>Comment tu t'appelles ?</div>
+            <div>C'est moi qui gagne à tous les coups à ces jeux, haha !</div>
+            <div>Moi aussi</div>
+            <div>Je dort beaucoup !</div>
+            <div>Cool...</div>
+            <div>X</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>flex: 1 1 auto sur tous les éléments</h2>
+        <i>Tous les éléments vont s'agrandir et rétrécir de la même manière</i>
+        <div class="flex flex-12">
+            <div>SALUT</div>
+            <div>C'est moi ici !</div>
+            <div>Bise</div>
+            <div>Comment tu t'appelles ?</div>
+            <div>C'est moi qui gagne à tous les coups à ces jeux, haha !</div>
+            <div>Moi aussi</div>
+            <div>Je dort beaucoup !</div>
+            <div>Cool...</div>
+            <div>X</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>flex: 1 1 auto sur les 2 éléments</h2>
+        <i>Les 2 éléments vont s'agrandir et rétrécir de la même manière</i>
+        <div class="flex flex-13">
+            <div>Titre de la section variable</div>
+            <button>Modifier</button>
+        </div>
+    </section>
+
+    <section>
+        <h2>flex-grow: 1 sur le 1er élément</h2>
+        <i>Le 1er élément va s'agrandir pour prendre tout l'espace disponible, tandis que le 2ème ne bouge pas</i>
+        <div class="flex flex-14">
+            <div>Titre de la section variable</div>
+            <button>Modifier</button>
+        </div>
+    </section>
+
+    <section>
+        <h2>[Multi-lignes, flex-wrap: wrap] min-width: 100px; sur tous les éléments</h2>
+        <i>Tous les éléments mesurent 100px</i>
+        <div class="flex flex-15">
+            <div>SALUT</div>
+            <div>C'est moi ici !</div>
+            <div>Bise</div>
+            <div>Comment tu t'appelles ?</div>
+            <div>C'est moi qui gagne à tous les coups à ces jeux, haha !</div>
+            <div>Moi aussi</div>
+            <div>Je dort beaucoup !</div>
+            <div>Cool...</div>
+            <div>X</div>
+            <div>C'est beau la vie</div>
+            <div>C'est merveilleux</div>
+            <div>Beurk !</div>
+            <div>Dégueu !</div>
+            <div>J'ai le chocolat</div>
+            <div>Je suis pas Einstein !</div>
+            <div>Comment allez-vous</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>[Multi-lignes, flex-wrap: wrap] min-width: 100px; et flex-grow: 1; sur tous les éléments</h2>
+        <i>Pour chaque ligne, tous les éléments de cette ligne vont s'agrandir de la même manière</i><br/>
+        <i>Chaque ligne est composée des mêmes éléments que ci-dessus, qui n'a pas le grow</i>
+        <div class="flex flex-16">
+            <div>SALUT</div>
+            <div>C'est moi ici !</div>
+            <div>Bise</div>
+            <div>Comment tu t'appelles ?</div>
+            <div>C'est moi qui gagne à tous les coups à ces jeux, haha !</div>
+            <div>Moi aussi</div>
+            <div>Je dort beaucoup !</div>
+            <div>Cool...</div>
+            <div>X</div>
+            <div>C'est beau la vie</div>
+            <div>C'est merveilleux</div>
+            <div>Beurk !</div>
+            <div>Dégueu !</div>
+            <div>J'ai le chocolat</div>
+            <div>Je suis pas Einstein !</div>
+            <div>Comment allez-vous</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>[Multi-lignes, flex-wrap: wrap] min-width: 100px; sur tous les éléments et flex-grow: 1; sur le 8ème élément</h2>
+        <i>Seul le 8ème élément ("Cool...") peut s'agrandir. En conséquence, seule la ligne contenant le 8ème élément sera remplie</i>
+        <div class="flex flex-17">
+            <div>SALUT</div>
+            <div>C'est moi ici !</div>
+            <div>Bise</div>
+            <div>Comment tu t'appelles ?</div>
+            <div>C'est moi qui gagne à tous les coups à ces jeux, haha !</div>
+            <div>Moi aussi</div>
+            <div>Je dort beaucoup !</div>
+            <div>Cool...</div>
+            <div>X</div>
+            <div>C'est beau la vie</div>
+            <div>C'est merveilleux</div>
+            <div>Beurk !</div>
+            <div>Dégueu !</div>
+            <div>J'ai le chocolat</div>
+            <div>Je suis pas Einstein !</div>
+            <div>Comment allez-vous</div>
+        </div>
+    </section>
+
+</body>
+</html>
